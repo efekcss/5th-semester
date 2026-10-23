@@ -1,0 +1,76 @@
+---
+title: "İST347 Quiz 1: New York Hava Kalitesi Raporu"
+author: "Hasan Efe Kocasu (2240329066)"
+date: today
+lang: tr
+format:
+  html:
+    toc: true
+    embed-resources: true
+execute:
+  warning: false
+  message: false
+---
+
+```{r}
+#| include: false
+# Gerekli paketleri burada yükleyin
+library(dplyr)
+hava <- airquality
+```
+
+## 1. Veriyi Tanıyalım
+
+<!-- S1: Verinin boyutlarını ve eksik değerlerini inceleyin.
+     Aşağıdaki cümledeki ... yerlerine SATIR İÇİ KOD yazın. -->
+
+Veri seti `r nrow(airquality)` gözlem ve `r ncol(airquality)` değişkenden oluşmaktadır. Ozon (`Ozone`) değişkeninde `r sum(is.na(airquality$Ozone))` eksik gözlem vardır.
+
+```{r}
+nrow(airquality)
+ncol(airquality)
+sum(is.na(airquality$Ozone))
+```
+
+## 2. Aylar
+
+```{r}
+airquality$ay <- factor(
+  airquality$Month, levels = c(5,6,7,8,9) ,
+  labels = c("Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül")
+)
+table(airquality$ay)
+sum(airquality$Temp > 85)
+```
+
+## 3. Aylara Göre Özet Tablo
+
+```{r}
+# Hocam hiç anlamadım neden yapamadım anlamadım ama ai dan da direkt cevap 
+#vermek istemiyom
+```
+
+## 4. Sıcaklık Sınıfları
+
+```{r}
+airquality <- airquality |>
+  mutate(
+    sicaklik_sinifi = if_else(
+      Temp < 70, "Serin",
+      if_else(Temp < 85, "Ilık", "Sıcak")
+    )
+  )
+table(airquality$ay, airquality$sicaklik_sinifi)
+sum(airquality$sicaklik_sinifi == "Sıcak")
+```
+
+## 5. Kendi Özet Fonksiyonum
+
+```{r} 
+# Hocam ubuntu (linux <3 ) kullanıyorum ve neden bilmiyorum ancak .qmd için 
+# rmarkdown paketini kurmama rağmen sürekli hata mesajı veriyor
+# anlamadım sanırım eksik paketler varmış bundan dolayı düzgün kuramıyomuş
+# yazdığım kodları denemekte, render almakta çok zorlandım dual boot yapıp ubuntunun 
+# yanına windows kurucam gibi duruyor o yüzden bu kadar yapabildim ödevi de kusura bakmayın 
+# sizi seviyoruz Onur Hocam sağlıcakla kalın.
+```

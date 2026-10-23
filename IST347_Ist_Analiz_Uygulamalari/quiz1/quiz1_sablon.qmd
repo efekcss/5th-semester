@@ -1,0 +1,67 @@
+---
+title: "İST347 Quiz 1: New York Hava Kalitesi Raporu"
+author: "Hasan Efe Kocasu (2240329066)"
+date: today
+lang: tr
+format:
+  html:
+    toc: true
+    embed-resources: true
+execute:
+  warning: false
+  message: false
+---
+
+```{r}
+#| include: false
+# Gerekli paketleri burada yükleyin
+library(dplyr)
+hava <- airquality
+```
+
+## 1. Veriyi Tanıyalım
+
+<!-- S1: Verinin boyutlarını ve eksik değerlerini inceleyin.
+     Aşağıdaki cümledeki ... yerlerine SATIR İÇİ KOD yazın. -->
+
+Veri seti `r count(airquality)` gözlem ve `r length(airquality)` değişkenden oluşmaktadır. Ozon (`Ozone`) değişkeninde `r count(is.na(airquality)` eksik gözlem vardır.
+
+```{r}
+# S1 kodları
+table(airquality)
+```
+
+HADİ’ye girin: Ozone değişkeninde kaç eksik gözlem vardır? `r count(is.na(airquality))`
+
+## 2. Aylar
+
+```{r}
+# S2 kodları
+
+```
+
+## 3. Aylara Göre Özet Tablo
+
+```{r}
+# S3 kodları
+
+```
+
+## 4. Sıcaklık Sınıfları
+
+```{r}
+# S4 kodları
+
+```
+
+## 5. Kendi Özet Fonksiyonum
+
+```{r}
+# S5 kodları
+
+```
+
+## 6. Sonuç
+
+<!-- 3-4 cümlelik yorumunuzu buraya yazın. -->
+
