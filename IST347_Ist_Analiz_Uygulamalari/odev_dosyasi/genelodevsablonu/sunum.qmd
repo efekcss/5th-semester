@@ -1,0 +1,77 @@
+---
+title: "BAŞLIK: Verinizi ve Sorunuzu Anlatan Bir Başlık"
+subtitle: "İST347 Dönem Ödevi — Grup NN"
+author: "Ad Soyad · Ad Soyad · Ad Soyad · Ad Soyad"
+date: today
+date-format: "D MMMM YYYY"
+lang: tr
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    embed-resources: true
+    width: 1280
+    height: 720
+    fig-width: 9
+    fig-height: 5
+    fig-align: center
+execute:
+  echo: false        # Sunumda kod görünmez
+  warning: false
+  message: false
+---
+
+```{r}
+#| include: false
+source("hazirlik.R")   # Raporla aynı veri
+```
+
+<!--
+SUNUM KURALLARI
+- 8–12 slayt, 8 dakika.
+- Her slaytın başlığı bir MESAJ olsun: "Kutu grafiği" değil,
+  "Portakal suyu düşük dozlarda daha etkili" gibi.
+- Bir slayt = bir grafik ya da kısa bir tablo + 1–2 cümle.
+- Sayıları satır içi kodla yazın; raporla aynı sonuçları göstermelidir.
+- "## Başlık" yeni bir slayt başlatır.
+-->
+
+## Veri ve sorularımız
+
+- **Veri:** ... (`r nrow(veri)` gözlem)
+- **Soru 1:** ...
+- **Soru 2:** ...
+- **Soru 3:** ...
+
+## Bulgu 1: ... (mesaj veren başlık)
+
+```{r}
+ggplot(veri, aes(doz, len, fill = supp)) +
+  geom_boxplot() +
+  labs(x = "Doz (mg/gün)", y = "Diş uzunluğu", fill = NULL)
+```
+
+Bu grafik şablonun örnek verisiyle çizilmiştir; kendi grafiğinizle değiştirin.
+
+## Bulgu 2: ...
+
+## Bulgu 3: ...
+
+## Test sonuçlarının özeti
+
+| Soru | Test | Sonuç | Etki büyüklüğü |
+|------|------|-------|----------------|
+| 1 | Welch t / Mann–Whitney | p = ... | d = ... |
+| 2 | Ki-kare / Fisher | p = ... | V = ... |
+| 3 | ANOVA / Kruskal–Wallis | p = ... | η² = ... |
+
+## Regresyon: ...
+
+## Sonuç ve kısıtlar
+
+- ...
+- ...
+
+## Teşekkürler {.center}
+
+Sorular?

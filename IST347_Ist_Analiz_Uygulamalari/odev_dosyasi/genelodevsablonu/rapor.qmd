@@ -1,0 +1,180 @@
+---
+title: "BAŞLIK: Verinizi ve Sorunuzu Anlatan Bir Başlık"
+subtitle: "İST347 Dönem Ödevi — Grup NN"
+author:
+  - "Ad Soyad (Öğrenci No)"
+  - "Ad Soyad (Öğrenci No)"
+date: today
+date-format: "D MMMM YYYY"
+lang: tr
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    embed-resources: true
+    code-fold: show
+    code-tools: true
+    theme: cosmo
+execute:
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: kurulum
+#| include: false
+source("hazirlik.R")   # Veri yükleme ve hazırlama (rapor ve sunum ortak)
+library(plotly)
+library(patchwork)
+knitr::opts_chunk$set(fig.align = "center", out.width = "85%")
+```
+
+<!--
+YÖNERGE NOTLARI
+- Başlıkları DEĞİŞTİRMEYİN; altlarını doldurun. Yorum etiketi
+  ile yazılmış açıklamaları tamamladıkça silebilirsiniz.
+- Her çıktının altına 1–2 cümlelik YORUM yazın. Yorumsuz çıktı puan almaz.
+- Metindeki sayıları elle değil, SATIR İÇİ KOD ile yazın.
+- Sık sık Render edin!
+-->
+
+# Giriş ve Araştırma Soruları
+
+<!-- Verinin kaynağı, birimi, gözlem ve değişken sayısı. Sayılar satır içi kodla. -->
+
+Bu çalışmada ... verisi kullanılmıştır. Veri `r nrow(veri)` gözlem ve `r ncol(veri)` değişkenden oluşmaktadır.
+
+<!-- Kullanılan değişkenlerin tablosu: ad, anlam, birim, tür -->
+
+| Değişken | Anlamı | Birim | Tür |
+|----------|--------|-------|-----|
+| `...` | ... | ... | Sayısal / Faktör |
+
+: Kullanılan değişkenler {#tbl-degiskenler}
+
+**Araştırma soruları**
+
+1. ...
+2. ...
+3. ...
+
+# Veri Hazırlama
+
+<!-- hazirlik.R dosyasında ne yaptığınızı açıklayın: seçilen değişkenler,
+     faktör dönüşümleri, türetilen değişken(ler), eksik veri kararı ve gerekçesi. -->
+
+```{r}
+#| label: eksik-degerler
+# Eksik değerlerin sayısı (ham veride)
+colSums(is.na(ham_veri))
+```
+
+```{r}
+#| label: hazir-veri
+glimpse(veri)
+```
+
+# Kendi Fonksiyonumuz
+
+<!-- Rapor boyunca en az iki kez kullanacağınız bir fonksiyon. stop() ile hata kontrolü olsun. -->
+
+```{r}
+#| label: fonksiyon
+# fonksiyon_adi <- function(...) {
+#   if (...) stop("Anlaşılır bir hata mesajı")
+#   ...
+# }
+```
+
+# Keşifsel Veri Analizi ve Görselleştirme
+
+<!-- En az 4 ggplot (dağılım, grup karşılaştırması, ilişki, kategorik) + en az 1 plotly.
+     Her grafik: label fig-..., fig-cap, Türkçe eksen adları + birim, altında yorum. -->
+
+```{r}
+#| label: fig-dagilim
+#| fig-cap: "... değişkeninin dağılımı"
+# ggplot(veri, aes(...)) + geom_histogram(...) + labs(x = "...", y = "...")
+```
+
+@fig-dagilim ... göstermektedir.
+
+# Betimsel İstatistikler
+
+<!-- Sayısal değişkenler tablosu; gruplara göre özet tablo (knitr::kable, başlıklı);
+     frekans/yüzde tabloları; aykırı değerler; ortalama mı ortanca mı? -->
+
+```{r}
+#| label: tbl-ozet
+#| tbl-cap: "Gruplara göre ... özeti"
+# veri |> group_by(...) |> summarise(...) |> knitr::kable(digits = 2)
+```
+
+# Dağılım, Güven Aralığı ve Bootstrap
+
+<!-- Q-Q grafiği + histogram/normal eğri; ortalama için %95 GA (formül + t.test);
+     bir oran için GA; ortanca (vb.) için bootstrap GA (set.seed ile). -->
+
+```{r}
+#| label: guven-araligi
+set.seed(347)
+```
+
+# Hipotez Testleri
+
+## İki Grubun Karşılaştırılması
+
+<!-- Hipotezler; varsayımlar (shapiro.test, var.test / Q-Q); Welch t-testi;
+     Mann–Whitney U; Cohen's d; raporlama cümlesi. -->
+
+## Kategorik Değişkenler Arasındaki İlişki
+
+<!-- Çapraz tablo; chisq.test + beklenen frekanslar; gerekirse fisher.test;
+     Cramér's V; raporlama cümlesi. -->
+
+# Üç ya da Daha Fazla Grubun Karşılaştırılması
+
+<!-- ANOVA tablosu + eta kare; artık grafikleri, Shapiro–Wilk, Levene;
+     gerekirse Welch ANOVA; post-hoc (Tukey / Games–Howell);
+     Kruskal–Wallis (+ Dunn); ortalama ve %95 GA grafiği. -->
+
+# Korelasyon ve Basit Doğrusal Regresyon
+
+<!-- Serpilme grafiği; Pearson + Spearman; lm() ve yorumu; confint();
+     plot(model) ile artık analizi; predict() ile güven ve kestirim aralığı;
+     aykırı/etkili gözlemler. -->
+
+# Sonuç
+
+<!-- Her araştırma sorusuna kısa cevap. Kısıtlar. -->
+
+1. **Soru 1:** ...
+2. **Soru 2:** ...
+3. **Soru 3:** ...
+
+**Kısıtlar:** ...
+
+## Grup İçi İş Bölümü {.unnumbered}
+
+| Üye | Yaptığı bölümler / katkısı |
+|-----|----------------------------|
+| Ad Soyad | ... |
+| Ad Soyad | ... |
+
+## Yapay Zekâ Kullanım Beyanı {.unnumbered}
+
+<!-- Birini seçin ve gerekiyorsa doldurun. -->
+
+- [ ] Bu çalışmada yapay zekâ aracı kullanılmamıştır.
+- [ ] Kod yazımında şu araç(lar) şu amaçla kullanılmıştır: ...
+
+Yorumlar grup üyeleri tarafından yazılmıştır.
+
+## Oturum Bilgisi {.unnumbered}
+
+```{r}
+#| label: oturum
+#| code-fold: true
+sessionInfo()
+```
