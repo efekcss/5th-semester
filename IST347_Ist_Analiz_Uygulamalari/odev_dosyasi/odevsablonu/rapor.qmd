@@ -1,9 +1,11 @@
 ---
 title: "BAŞLIK: Verinizi ve Sorunuzu Anlatan Bir Başlık"
-subtitle: "İST347 Dönem Ödevi — Grup NN"
+subtitle: "İST347 Dönem Ödevi — Grup 14"
 author:
-  - "Ad Soyad (Öğrenci No)"
-  - "Ad Soyad (Öğrenci No)"
+  - "Hasan Efe Kocasu (2240329066)"
+  - "Ali İhsan Kıyak (2240329016)"
+  - "Adem Yağbasan (2240329043)"
+  - "Erenalp Doğan (2240329019)"
 date: today
 date-format: "D MMMM YYYY"
 lang: tr

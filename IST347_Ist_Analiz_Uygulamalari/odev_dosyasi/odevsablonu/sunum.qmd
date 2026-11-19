@@ -1,7 +1,7 @@
 ---
 title: "BAŞLIK: Verinizi ve Sorunuzu Anlatan Bir Başlık"
-subtitle: "İST347 Dönem Ödevi — Grup NN"
-author: "Ad Soyad · Ad Soyad · Ad Soyad · Ad Soyad"
+subtitle: "İST347 Dönem Ödevi — Grup 14"
+author: "Hasan Efe Kocasu · Ali İhsan Kıyak · Adem Yağbasan · Erenalp Doğan"
 date: today
 date-format: "D MMMM YYYY"
 lang: tr
