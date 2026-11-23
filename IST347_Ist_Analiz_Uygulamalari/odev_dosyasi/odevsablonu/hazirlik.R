@@ -1,6 +1,6 @@
 # =============================================================
 # İST347 Dönem Ödevi — Veri hazırlama kodu
-# Grup no: NN
+# Grup no: 14
 # -------------------------------------------------------------
 # Bu dosya hem rapor.qmd hem sunum.qmd tarafından
 #   source("hazirlik.R")
@@ -21,7 +21,7 @@ suppressPackageStartupMessages({
 # 1) Veriyi yükleyin ---------------------------------------------
 # ÖRNEK: Şablonun çalışması için geçici olarak ToothGrowth verisi yüklenmiştir.
 # Bu satırı veri_havuzu.html'deki KENDİ veri setinizin yükleme koduyla değiştirin.
-ham_veri <- datasets::ToothGrowth
+ham_veri <- data("CPS1985", package = "AER")
 
 # 2) Değişkenleri seçin, adlandırın, faktörlere çevirin -------------
 veri <- ham_veri |>

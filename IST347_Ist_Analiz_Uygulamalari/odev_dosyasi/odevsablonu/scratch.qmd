@@ -1,0 +1,34 @@
+---
+title: "scratch qmd file"
+author: "efekcss"
+format: html
+editor: visual
+---
+
+## Bu dosya da ne? 
+
+Bu quarto doyası tamamen scratch gibi kullanılmak için hazırlandı, kodlar için not almam gerektiğinde ya da genel olarak not almam gerektiğinde bu dosyayı kullanacağım. 
+
+Yine scratch adlı bir karalama R dosyası daha var orada doğrudan kod çalıştırmak için gerektiğinde kod çöpülüğü olarak kullanacağım.
+
+**_NOT : CTRL+ALT+İ ile direkt R kod bloğu ekleyebiliyorum._**
+
+Veriyi tanıtmak için gerekli paketi kuralım cihaza (paket tek seferlik indirilir) ben zaten indirdim o yüzden nasıl indirildiğini göstericeğim sadece (eval: false) ile bir gösterim yaptım bu yüzden sadece
+
+```{r}
+#| eval: false
+install.packages("AER")
+```
+
+Verimizin içinde olduğu paketimizi yükleyelim (#| output: false seçeneği yazdım çünkü çıktısını görmeye gerek yok ancak çalışmasını da istiyorum her bu dosya çalıştırıldığında bu yüzden çıktı saklandı sadece): 
+
+```{r}
+#| output: false
+library(AER)
+```
+
+# Giriş
+
+## Verimiz ne? Ne anlatıyor?
+
+ABD'de 1985 yılında yapılan
