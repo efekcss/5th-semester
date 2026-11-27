@@ -1,0 +1,13 @@
+---
+title: "non-par-odev"
+author: "efekcss"
+format: html
+editor: visual
+---
+
+# NON-PAR Ödevi
+
+Bu dosya Non-par ödevi için quarto dosyası olucak genel analiz ve R kodlamalarını bu dosya üzerinden yapacağım.
+
+_NOT : CTRL + ALT + I(ya da i) R kod bloğu ekliyor kısayol bilgisi_ 
+

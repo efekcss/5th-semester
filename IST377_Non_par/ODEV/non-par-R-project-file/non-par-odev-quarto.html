@@ -8,7 +8,7 @@
 
 <meta name="author" content="efekcss">
 
-<title>scratch qmd file</title>
+<title>non-par-odev</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,55 +27,20 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="scratch_files/libs/clipboard/clipboard.min.js"></script>
-<script src="scratch_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="scratch_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="scratch_files/libs/quarto-html/popper.min.js"></script>
-<script src="scratch_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="scratch_files/libs/quarto-html/anchor.min.js"></script>
-<link href="scratch_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="scratch_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="scratch_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="scratch_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="scratch_files/libs/bootstrap/bootstrap-cc9a9ff1cf0f90bb56384d316dd2f0db.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="non-par-odev-quarto_files/libs/clipboard/clipboard.min.js"></script>
+<script src="non-par-odev-quarto_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="non-par-odev-quarto_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="non-par-odev-quarto_files/libs/quarto-html/popper.min.js"></script>
+<script src="non-par-odev-quarto_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="non-par-odev-quarto_files/libs/quarto-html/anchor.min.js"></script>
+<link href="non-par-odev-quarto_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="non-par-odev-quarto_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="non-par-odev-quarto_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="non-par-odev-quarto_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="non-par-odev-quarto_files/libs/bootstrap/bootstrap-cc9a9ff1cf0f90bb56384d316dd2f0db.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -88,7 +53,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">scratch qmd file</h1>
+<h1 class="title">non-par-odev</h1>
 </div>
 
 
@@ -111,44 +76,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Bu quarto doyası tamamen scratch gibi kullanılmak için hazırlandı, kodlar için not almam gerektiğinde ya da genel olarak not almam gerektiğinde bu dosyayı kullanacağım.</p>
-<p>Yine scratch adlı bir karalama R dosyası daha var orada doğrudan kod çalıştırmak için gerektiğinde kod çöpülüğü olarak kullanacağım.</p>
-<p><strong><em>NOT : CTRL+ALT+İ ile direkt R kod bloğu ekleyebiliyorum.</em></strong></p>
-<p>Veriyi tanıtmak için gerekli paketi kuralım cihaza (paket tek seferlik indirilir) ben zaten indirdim o yüzden nasıl indirildiğini göstericeğim sadece (eval: false) ile bir gösterim yaptım bu yüzden sadece</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"AER"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Verimizin içinde olduğu paketimizi yükleyelim:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AER)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: car</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: carData</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: lmtest</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: zoo</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'zoo'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:base':
-
-    as.Date, as.Date.numeric</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: sandwich</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: survival</code></pre>
-</div>
-</div>
+<section id="non-par-ödevi" class="level1">
+<h1>NON-PAR Ödevi</h1>
+<p>Bu dosya Non-par ödevi için quarto dosyası olucak genel analiz ve R kodlamalarını bu dosya üzerinden yapacağım.</p>
+<p><em>NOT : CTRL + ALT + I(ya da i) R kod bloğu ekliyor kısayol bilgisi</em></p>
+</section>
 
 </main>
 <!-- /main column -->
